@@ -1,0 +1,20 @@
+Escenas encontradas: 7481
+
+Objetos anotados (sin DontCare): 40570
+
+Clase                 Conteo        %
+Car                    28742    70.8
+Pedestrian              4487    11.1
+Van                     2914     7.2
+Cyclist                 1627     4.0
+Truck                   1094     2.7
+Misc                     973     2.4
+Tram                     511     1.3
+Person_sitting           222     0.5
+
+Clase             Facil   Moderado   Dificil  Descartado
+Car                5971       9739      6006        7026
+Pedestrian         2310       1259       707         211
+Cyclist             654        444        96         433
+
+Generado: distribucion_clases.png

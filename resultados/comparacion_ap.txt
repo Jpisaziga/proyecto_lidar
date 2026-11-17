@@ -1,0 +1,36 @@
+Cifras de resultados/eval_second.txt redondeadas a 2 decimales
+R40 3d  Car         F/M/D = 90.53 81.59 78.58
+R40 3d  Pedestrian  F/M/D = 55.94 51.15 46.17
+R40 3d  Cyclist     F/M/D = 82.96 66.74 62.78
+R40 bev Car         F/M/D = 92.42 88.55 87.65
+R40 bev Pedestrian  F/M/D = 60.74 56.57 52.13
+R40 bev Cyclist     F/M/D = 88.05 71.17 66.89
+R11 3d  Car         F/M/D = 88.59 78.60 77.17
+R11 3d  Pedestrian  F/M/D = 56.54 52.99 47.74
+R11 3d  Cyclist     F/M/D = 80.59 67.13 63.11
+R11 bev Car         F/M/D = 90.01 87.92 86.45
+R11 bev Pedestrian  F/M/D = 61.99 56.66 53.81
+R11 bev Cyclist     F/M/D = 84.02 70.70 65.48
+
+Brecha entre clases, AP_3D R40 moderado (calculada con los valores de 2 decimales)
+Car - Pedestrian: 81.59 - 51.15 = 30.44
+Car - Cyclist: 81.59 - 66.74 = 14.85
+
+Comparacion con tab:baseline (yan2018, automovil, R11): propio R11 - paper
+3d  propio = [88.59, 78.6, 77.17]  paper = [87.43, 76.48, 69.1]  dif = [1.16, 2.12, 8.07]
+bev propio = [90.01, 87.92, 86.45]  paper = [89.96, 87.07, 79.66]  dif = [0.05, 0.85, 6.79]
+
+Comparacion con tab:openpcdet (README, R11 moderado): propio - README
+Car         propio = 78.60  README = 78.62  dif = -0.02
+Pedestrian  propio = 52.99  README = 52.98  dif = 0.01
+Cyclist     propio = 67.13  README = 67.15  dif = -0.02
+
+Diferencia R40 - R11, AP_3D moderado
+Car         R40 = 81.59  R11 = 78.60  dif = 2.99
+Pedestrian  R40 = 51.15  R11 = 52.99  dif = -1.84
+Cyclist     R40 = 66.74  R11 = 67.13  dif = -0.39
+
+Caida de facil a dificil, AP_3D R40
+Car         90.53 - 78.58 = 11.95
+Pedestrian  55.94 - 46.17 = 9.77
+Cyclist     82.96 - 62.78 = 20.18

@@ -1,0 +1,10 @@
+clase,franja,detectados,total,recall_propio,recall_preentrenado
+Car,0-20 m,3559,3787,93.98,94.22
+Car,20-40 m,4731,5708,82.88,82.95
+Car,40-70.4 m,816,1468,55.59,55.45
+Pedestrian,0-20 m,1080,1538,70.22,68.66
+Pedestrian,20-40 m,328,562,58.36,54.8
+Pedestrian,40-70.4 m,9,72,12.5,18.06
+Cyclist,0-20 m,181,215,84.19,83.72
+Cyclist,20-40 m,207,290,71.38,74.14
+Cyclist,40-70.4 m,58,95,61.05,60.0

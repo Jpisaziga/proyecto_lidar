@@ -1,0 +1,8 @@
+GPU (nombre, controlador, memoria): NVIDIA GeForce RTX 5060, 610.88, 8151 MiB
+Sistema: Linux-6.18.58.1-microsoft-standard-WSL2-x86_64-with-glibc2.35
+Python: 3.9.25
+PyTorch: 2.7.1+cu128
+CUDA (PyTorch): 12.8
+spconv: 2.3.8
+numba: 0.60.0
+OpenPCDet: 0.6.0+233f849 (commit 233f849)

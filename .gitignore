@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+datos/
+OpenPCDet/
+# archivos temporales de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+# instrucciones para el asistente (no forman parte del proyecto)
+CLAUDE.md

@@ -1,0 +1,30 @@
+Escenas encontradas: 7481
+
+Objetos anotados (sin DontCare): 40570
+
+Clase                 Conteo        %
+Car                    28742    70.8
+Pedestrian              4487    11.1
+Van                     2914     7.2
+Cyclist                 1627     4.0
+Truck                   1094     2.7
+Misc                     973     2.4
+Tram                     511     1.3
+Person_sitting           222     0.5
+
+Clase             Facil   Moderado   Dificil
+Car                5971       9739      6006
+Pedestrian         2310       1259       707
+Cyclist             654        444        96
+
+Puntos LiDAR por objeto (mediana), 7481 escenas
+Clase               0-20 m     20-40 m     40-70 m
+Car                    722          86          17
+Pedestrian             217          41          11
+Cyclist                215          45          16
+Objetos usados por franja:
+Car                   9466       12044        6741
+Pedestrian            2905        1352         222
+Cyclist                627         734         251
+
+Archivos generados: distribucion_clases.png, bev_000008.png, tablas_eda.tex

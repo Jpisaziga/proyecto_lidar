@@ -1,0 +1,42 @@
+Cifras derivadas para el informe (fuente: CSV de resultados/final)
+
+Propio - preentrenado, AP R40 (puntos)
+3d  Car         -1.05 -0.52 -0.39
+3d  Pedestrian  -0.16 0.08 0.73
+3d  Cyclist     -1.33 -0.80 -0.87
+bev Car         -0.49 -0.34 -0.38
+bev Pedestrian  -0.22 -0.41 0.08
+bev Cyclist     -2.72 -1.31 -0.89
+rango de diferencias: -2.72 a 0.73
+
+Brecha automovil - clase, AP_3D R40 moderado
+propio       Car - Pedestrian: 29.86
+propio       Car - Cyclist: 15.16
+preentrenado Car - Pedestrian: 30.46
+preentrenado Car - Cyclist: 14.88
+
+Caida facil -> dificil, AP_3D R40 (propio)
+Car         11.29
+Pedestrian  8.89
+Cyclist     19.72
+Diferencia AP_BEV - AP_3D moderado (propio)
+Car         7.12
+Pedestrian  4.93
+Cyclist     3.92
+
+Convergencia AP_3D moderado: cambio entre evaluaciones
+epoca 20->40: Car -3.50 Pedestrian 4.23 Cyclist 3.09
+epoca 40->60: Car 10.10 Pedestrian 0.58 Cyclist 3.05
+epoca 60->80: Car 2.50 Pedestrian 6.94 Cyclist 0.57
+
+Recall por distancia (propio): caida 0-20 m -> 40-70,4 m y diferencia con preentrenado
+Car         caida propio 38.39 | caida preentrenado 38.77 | propio - pre por franja: -0.24 -0.07 0.14
+Pedestrian  caida propio 57.72 | caida preentrenado 50.60 | propio - pre por franja: 1.56 3.56 -5.56
+Cyclist     caida propio 23.14 | caida preentrenado 23.72 | propio - pre por franja: 0.47 -2.76 1.05
+
+Preentrenado: evaluacion final (17-nov) - evaluacion del segundo avance (eval_second.txt)
+Car         0.02 0.02 0.02 0.00 0.00 0.00
+Pedestrian  0.01 0.00 0.00 0.00 0.00 0.01
+Cyclist     0.00 -0.01 0.00 0.00 -0.01 0.00
+
+Perdida media epoca 1: 1.1 | epoca 80: 0.28 | iteraciones totales: 74240

@@ -1,0 +1,7 @@
+,,Yan et al. 2018,Preentrenado,Propio,Propio - paper
+AP_3D,Facil,87.43,88.61,87.77,0.34
+AP_3D,Moderado,76.48,78.62,78.19,1.71
+AP_3D,Dificil,69.1,77.2,76.95,7.85
+AP_BEV,Facil,89.96,90.01,89.75,-0.21
+AP_BEV,Moderado,87.07,87.91,87.57,0.5
+AP_BEV,Dificil,79.66,86.46,85.99,6.33

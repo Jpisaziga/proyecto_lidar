@@ -1,0 +1,10 @@
+Car: distancia (m) al sensor segun centro de la etiqueta (camara, plano x-z)
+Facil       n= 5971 mediana= 19.04  % >40 m=  0.1
+Moderado    n= 9739 mediana= 32.71  % >40 m= 24.9
+Dificil     n= 6006 mediana= 25.54  % >40 m=  9.5
+Descartado  n= 7026 mediana= 48.55  % >40 m= 58.6
+
+Diferencias en puntos (README OpenPCDet R11 moderado vs yan2018 val moderado)
+Car OpenPCDet - Car paper: 2.14
+Car - Pedestrian: 25.64
+Car - Cyclist: 11.47

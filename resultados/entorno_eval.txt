@@ -1,0 +1,9 @@
+Entorno de la evaluacion (2026-11-08 17:02)
+NVIDIA GeForce RTX 5060, 610.88, 8151 MiB
+CUDA UMD Version: 13.3
+PyTorch 2.7.1+cu128 | CUDA (PyTorch) 12.8 | spconv 2.3.8 | numba 0.60.0 | pcdet 0.6.0+233f849
+Build cuda_12.8.r12.8/compiler.35583870_0
+Python 3.9.25
+OpenPCDet commit 233f849
+WSL2 6.18.54.1-microsoft-standard-WSL2, Ubuntu 22.04.5 LTS
+Checkpoint: second.pth del README de OpenPCDet (preentrenado, epoch 80)

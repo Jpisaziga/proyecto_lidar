@@ -1,0 +1,35 @@
+000201: anotaciones
+    Car            x=   1.2  y=  -2.9  dist=  3.1  oclusion=0  trunc=1.00
+    Car            x=   6.0  y=  -2.9  dist=  6.6  oclusion=1  trunc=0.45
+    Car            x=  15.1  y=  -2.1  dist= 15.3  oclusion=0  trunc=0.00
+    Cyclist        x=  18.7  y=   4.6  dist= 19.3  oclusion=0  trunc=0.00
+    Car            x=  17.8  y=   5.9  dist= 18.7  oclusion=0  trunc=0.00
+    Car            x=  22.2  y=  -1.1  dist= 22.2  oclusion=1  trunc=0.00
+    Car            x=  34.2  y=   1.3  dist= 34.2  oclusion=0  trunc=0.00
+    Car            x=  39.1  y=   9.6  dist= 40.3  oclusion=2  trunc=0.00
+    Car            x=  44.0  y=   3.5  dist= 44.1  oclusion=1  trunc=0.00
+    Pedestrian     x=  48.3  y=  13.2  dist= 50.0  oclusion=1  trunc=0.00
+    Pedestrian     x=  48.1  y=  13.7  dist= 50.0  oclusion=2  trunc=0.00
+    Cyclist        x=  20.8  y=   4.2  dist= 21.2  oclusion=0  trunc=0.00
+000201: 12 objetos reales (Car/Ped/Cyc), 11 detecciones -> pred_000201.png
+    Car         score=0.972  x=  15.2  y=  -2.2  dist= 15.4
+    Car         score=0.957  x=  34.2  y=   1.4  dist= 34.2
+    Car         score=0.933  x=  17.9  y=   5.9  dist= 18.9
+    Car         score=0.920  x=   6.2  y=  -2.9  dist=  6.9
+    Cyclist     score=0.900  x=  20.8  y=   4.2  dist= 21.2
+    Cyclist     score=0.781  x=  18.7  y=   4.7  dist= 19.3
+    Car         score=0.767  x=  44.3  y=   3.5  dist= 44.4
+    Car         score=0.655  x=  22.4  y=  -1.2  dist= 22.4
+    Car         score=0.605  x=  23.0  y=   7.0  dist= 24.0
+    Car         score=0.362  x=  34.3  y=  -3.1  dist= 34.4
+    Car         score=0.309  x=  59.9  y=   6.2  dist= 60.2
+000124: anotaciones
+    Car            x=  38.8  y= -13.9  dist= 41.3  oclusion=1  trunc=0.00
+    Car            x=  53.1  y=   3.4  dist= 53.2  oclusion=0  trunc=0.00
+    Cyclist        x=  58.2  y=   0.2  dist= 58.2  oclusion=0  trunc=0.00
+    Pedestrian     x=  59.3  y=  -1.1  dist= 59.3  oclusion=0  trunc=0.00
+    Pedestrian     x=  57.8  y=  10.2  dist= 58.7  oclusion=0  trunc=0.00
+000124: 5 objetos reales (Car/Ped/Cyc), 3 detecciones -> pred_000124.png
+    Car         score=0.466  x=  53.3  y=   3.4  dist= 53.4
+    Car         score=0.379  x=  38.2  y=  21.6  dist= 43.9
+    Cyclist     score=0.344  x=  44.4  y=  10.9  dist= 45.7

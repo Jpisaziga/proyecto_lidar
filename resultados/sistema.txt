@@ -1,0 +1,4 @@
+nvidia-smi (2026-10-18): NVIDIA GeForce RTX 5060, 8151 MiB, driver 610.88, CUDA (driver) 13.3
+CPU AMD Ryzen 7 5800XT, RAM 31,9 GB, Windows 11 Pro 10.0.26200
+WSL2: virtualizacion desactivada en firmware (HCS_E_HYPERV_NOT_INSTALLED); PyTorch/OpenPCDet sin instalar
+Checkpoint second.pth descargado (21 355 695 bytes) desde el enlace del README

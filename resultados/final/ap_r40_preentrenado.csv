@@ -1,0 +1,5 @@
+,AP_3D,AP_3D,AP_3D,AP_BEV,AP_BEV,AP_BEV
+,Facil,Moderado,Dificil,Facil,Moderado,Dificil
+Car,90.55,81.61,78.6,92.42,88.55,87.65
+Pedestrian,55.95,51.15,46.17,60.74,56.57,52.14
+Cyclist,82.96,66.73,62.78,88.05,71.16,66.89
