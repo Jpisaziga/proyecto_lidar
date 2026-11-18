@@ -35,7 +35,7 @@ Este notebook reúne el código y los resultados del informe técnico:
 6. Exhaustividad por franja de distancia.
 7. Ejemplos cualitativos en vista de pájaro.
 
-**Cómo ejecutarlo.** Requiere OpenPCDet instalado (ver `README.md` del repositorio) y KITTI en `OpenPCDet/data/kitti`, con los `kitti_infos_*.pkl` ya generados. El entrenamiento tarda unas 7 horas en una RTX 5060, así que por defecto (`ENTRENAR = False`) el notebook lee el registro del entrenamiento que se ejecutó con exactamente el comando que aparece en la sección 4. Las evaluaciones sí se ejecutan dentro del notebook (`EVALUAR = True`), de modo que todas las métricas que se muestran aquí salen de esta ejecución.
+**Cómo ejecutarlo.** Requiere OpenPCDet instalado (ver `README.md` del repositorio) y KITTI en `OpenPCDet/data/kitti`, con los `kitti_infos_*.pkl` ya generados. El entrenamiento tarda unas 7 horas en una RTX 5060, así que por defecto (`ENTRENAR = False`) el notebook lee el registro del entrenamiento que se ejecutó con exactamente el comando que aparece en la sección 4. Las evaluaciones (`test.py`, unos 25 minutos en total) se ejecutaron desde este mismo notebook con `EVALUAR = True` el 17 de noviembre de 2026, y sus registros completos quedaron guardados en `resultados/final/eval_*.txt`. Por defecto (`EVALUAR = False`) el notebook lee esos registros, porque repetir la evaluación en GPU puede mover algunas cifras en la segunda decimal por el no determinismo de ciertas operaciones; con `EVALUAR = True` se vuelven a ejecutar.
 """)
 
 code(r"""
@@ -62,7 +62,7 @@ RES.mkdir(parents=True, exist_ok=True)
 
 # --- Opciones --------------------------------------------------------------
 ENTRENAR = False          # True: vuelve a entrenar 80 epocas (~7 h)
-EVALUAR = True            # True: ejecuta test.py sobre los checkpoints
+EVALUAR = False           # True: vuelve a ejecutar test.py (~25 min); False: lee los registros guardados
 EPOCAS_EVAL = [20, 40, 60, 80]
 UMBRAL = 0.3              # score minimo para figuras y analisis por distancia
 ESCENAS = ["000201", "000124"]
@@ -252,8 +252,12 @@ for ep in EPOCAS_EVAL:
     ck = SALIDA / "ckpt" / f"checkpoint_epoch_{ep}.pth"
     nombre = f"eval_propio_epoca{ep}.txt"
     logs[ep] = evaluar(ck, TAG, nombre) if EVALUAR else RES / nombre
-    print(f"epoca {ep}: listo")
+    print(f"epoca {ep}: {'evaluada' if EVALUAR else 'registro leido'} -> {logs[ep].name}")
 log_pre = evaluar(CKPT_PRE, "preentrenado", "eval_preentrenado.txt") if EVALUAR else RES / "eval_preentrenado.txt"
+print(f"preentrenado: {'evaluado' if EVALUAR else 'registro leido'} -> {log_pre.name}")
+for f in list(logs.values()) + [log_pre]:
+    fecha = re.search(r"^(\d{4}-\d\d-\d\d \d\d:\d\d:\d\d),", f.read_text(), re.M).group(1)
+    print(f"  {f.name}: generado {fecha}")
 """)
 
 code(r"""
@@ -399,17 +403,18 @@ for i in ESCENAS:
 
 md("## 8. Resumen de cifras")
 
+md(r"""
+Cifras derivadas que cita el informe (diferencias, brechas y caídas). Se calculan con `scripts/cifras_informe.py` a partir de las tablas que generó este notebook, redondeadas a dos decimales, de modo que coinciden con lo que se obtiene restando los valores de las tablas.
+""")
+
 code(r"""
-car_m = propio.loc["Car", ("AP_3D", "Moderado")]
-print(f"AP_3D R40 moderado (propio): automovil {car_m:.2f}, peaton "
-      f"{propio.loc['Pedestrian', ('AP_3D', 'Moderado')]:.2f}, ciclista "
-      f"{propio.loc['Cyclist', ('AP_3D', 'Moderado')]:.2f}")
-for c in ["Pedestrian", "Cyclist"]:
-    print(f"Brecha automovil - {c}: {car_m - propio.loc[c, ('AP_3D', 'Moderado')]:.2f} puntos")
-for c in CLASES:
-    v = propio.loc[c, "AP_3D"]
-    print(f"Caida facil -> dificil {c}: {v['Facil'] - v['Dificil']:.2f} puntos")
-print(f"Duracion del entrenamiento: {duracion}")
+pr = propio.round(2)
+print(f"AP_3D R40 moderado (propio): automovil {pr.loc['Car', ('AP_3D', 'Moderado')]:.2f}, peaton "
+      f"{pr.loc['Pedestrian', ('AP_3D', 'Moderado')]:.2f}, ciclista "
+      f"{pr.loc['Cyclist', ('AP_3D', 'Moderado')]:.2f}")
+print(f"Duracion del entrenamiento: {duracion}\n")
+r = subprocess.run([sys.executable, str(PROY / "scripts/cifras_informe.py")], capture_output=True, text=True)
+print(r.stdout, r.stderr)
 """)
 
 nb = nbf.v4.new_notebook()
